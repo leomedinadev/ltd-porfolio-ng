@@ -31,12 +31,18 @@ jobs:
       - name: Build Angular app
         run: npm run build:pro
 
+      - name: Prepare deploy folder
+        run: |
+          mkdir deploy
+          mkdir deploy/portfolio
+          cp -R dist/portfolio/browser/* deploy/portfolio/
+
       - name: Configure git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/portfolio/browser --dest=portfolio
+        run: npx angular-cli-ghpages --dir=deploy --branch=gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
