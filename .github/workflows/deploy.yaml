@@ -23,7 +23,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --include=optional
 
       - name: Build Angular app
         run: npm run build:pro
