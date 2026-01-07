@@ -10,8 +10,9 @@ export class ThemeService {
   $isDarkMode = signal(false);
 
   constructor() {
-    this.$isDarkMode.set(localStorage.getItem('theme') === ThemeEnum.dark);
-    this.applyTheme(this.$isDarkMode() ? ThemeEnum.dark : ThemeEnum.light);
+    // this.$isDarkMode.set(localStorage.getItem('theme') === ThemeEnum.dark);
+    // this.applyTheme(this.$isDarkMode() ? ThemeEnum.dark : ThemeEnum.light);
+    this.applyTheme(ThemeEnum.dark);
   }
 
 
