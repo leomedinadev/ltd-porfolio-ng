@@ -37,6 +37,6 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/portfolio/browser
+        run: npx angular-cli-ghpages --dir=dist/portfolio/browser --dest=portfolio
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
