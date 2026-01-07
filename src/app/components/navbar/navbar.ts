@@ -20,7 +20,8 @@ export class Navbar implements OnInit {
     this.initTheme();
   }
   initTheme() {
-    const theme = this.getThemePreference();
+    // const theme = this.getThemePreference();
+    const theme = ThemeEnum.dark;
     this.themeService.toggleTheme(theme);
     this.updateIcon(theme);
   }
