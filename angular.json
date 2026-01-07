@@ -23,8 +23,8 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "/porfolio/",
-            "outputPath": "dist/portfolio",
+            "baseHref": "/ltd-porfolio-ng/",
+            "outputPath": "dist/porfolio",
             "assets": [
               {
                 "glob": "**/*",
