@@ -1,0 +1,34 @@
+name: Deploy Portfolio Angular to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 12
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Angular app
+        run: npm run build -- --configuration production --base-href /ltd-portfolio-ng/
+
+      - name: Deploy to GitHub Pages
+        run: npx angular-cli-ghpages --dir=dist/ltd-portfolio-ng
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
