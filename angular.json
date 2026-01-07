@@ -23,8 +23,8 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "/ltd-porfolio-ng/",
-            "outputPath": "dist/ltd-porfolio-ng",
+            "baseHref": "/porfolio/",
+            "outputPath": "dist/portfolio",
             "assets": [
               {
                 "glob": "**/*",
@@ -86,6 +86,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
