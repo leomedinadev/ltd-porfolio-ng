@@ -8,7 +8,7 @@
     "name": "echo $npm_package_name",
     "start": "ng serve --port 4300",
     "build": "ng build",
-    "build:pro": "ng build --configuration=production --base-href $npm_package_base",
+    "build:pro": "ng build --configuration=production --base-href /porfolio/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "publish": "npm run build:pro && cd dist && npm publish",
