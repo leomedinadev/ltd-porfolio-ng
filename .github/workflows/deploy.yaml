@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: npm run build -- --configuration production --base-href /ltd-portfolio-ng/
+        run: npm run build:pro
 
       - name: Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/ltd-portfolio-ng/browser
