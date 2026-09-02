@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio built with Angular 21 and Tailwind CSS v4, showcasing my professional experience, projects, and technical skills.
 
-**Live site:** [leomedinadev.github.io/ltd-porfolio-ng](https://leomedinadev.github.io/ltd-porfolio-ng/)
+**Live site:** [leomedinadev.github.io/ltd-portfolio-ng](https://leomedinadev.github.io/ltd-portfolio-ng/)
 
 ---
 
